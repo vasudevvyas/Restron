@@ -827,6 +827,23 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script> const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open('GET', 'https://instagram-scraper-2022.p.rapidapi.com/ig/randusername/');
+xhr.setRequestHeader('x-rapidapi-key', 'c27639d781mshbd8d5b9beb4eecfp110acejsn87a998d38130');
+xhr.setRequestHeader('x-rapidapi-host', 'instagram-scraper-2022.p.rapidapi.com');
+
+xhr.send(data);</script>
+
 </body>
 
 </html>
